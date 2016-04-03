@@ -12,6 +12,12 @@
 		47784F0D1CAE46720092AB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47784F0B1CAE46720092AB69 /* Main.storyboard */; };
 		47784F0F1CAE46720092AB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47784F0E1CAE46720092AB69 /* Assets.xcassets */; };
 		47784F121CAE46720092AB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47784F101CAE46720092AB69 /* LaunchScreen.storyboard */; };
+		E82A6F621CB01AA7004CBBB1 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */; };
+		E82A6F671CB01C44004CBBB1 /* AlcoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */; };
+		E82A6F6A1CB01FC6004CBBB1 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F691CB01FC6004CBBB1 /* Glass.swift */; };
+		E82A6F6D1CB0265B004CBBB1 /* GlassDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F6C1CB0265B004CBBB1 /* GlassDataSource.swift */; };
+		E82A6F711CB02899004CBBB1 /* AlcoholViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F701CB02899004CBBB1 /* AlcoholViewCell.swift */; };
+		E82A6F731CB028EF004CBBB1 /* AlcoholViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82A6F721CB028EF004CBBB1 /* AlcoholViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		47784F0E1CAE46720092AB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47784F111CAE46720092AB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47784F131CAE46720092AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
+		E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoConfiguration.swift; sourceTree = "<group>"; };
+		E82A6F691CB01FC6004CBBB1 /* Glass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
+		E82A6F6C1CB0265B004CBBB1 /* GlassDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassDataSource.swift; sourceTree = "<group>"; };
+		E82A6F701CB02899004CBBB1 /* AlcoholViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoholViewCell.swift; sourceTree = "<group>"; };
+		E82A6F721CB028EF004CBBB1 /* AlcoholViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlcoholViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +50,7 @@
 		47784EFB1CAE46720092AB69 = {
 			isa = PBXGroup;
 			children = (
+				E82A6F601CB017AB004CBBB1 /* vodka */,
 				47784F061CAE46720092AB69 /* ALVodkaNotification */,
 				47784F051CAE46720092AB69 /* Products */,
 			);
@@ -62,6 +75,43 @@
 				47784F131CAE46720092AB69 /* Info.plist */,
 			);
 			path = ALVodkaNotification;
+			sourceTree = "<group>";
+		};
+		E82A6F601CB017AB004CBBB1 /* vodka */ = {
+			isa = PBXGroup;
+			children = (
+				E82A6F681CB01FB6004CBBB1 /* Glass */,
+				E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */,
+				E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */,
+			);
+			path = vodka;
+			sourceTree = "<group>";
+		};
+		E82A6F681CB01FB6004CBBB1 /* Glass */ = {
+			isa = PBXGroup;
+			children = (
+				E82A6F6B1CB0264D004CBBB1 /* dataSource */,
+				E82A6F691CB01FC6004CBBB1 /* Glass.swift */,
+			);
+			path = Glass;
+			sourceTree = "<group>";
+		};
+		E82A6F6B1CB0264D004CBBB1 /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E82A6F6F1CB02860004CBBB1 /* AlcoholCell */,
+				E82A6F6C1CB0265B004CBBB1 /* GlassDataSource.swift */,
+			);
+			path = dataSource;
+			sourceTree = "<group>";
+		};
+		E82A6F6F1CB02860004CBBB1 /* AlcoholCell */ = {
+			isa = PBXGroup;
+			children = (
+				E82A6F701CB02899004CBBB1 /* AlcoholViewCell.swift */,
+				E82A6F721CB028EF004CBBB1 /* AlcoholViewCell.xib */,
+			);
+			path = AlcoholCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47784F121CAE46720092AB69 /* LaunchScreen.storyboard in Resources */,
+				E82A6F731CB028EF004CBBB1 /* AlcoholViewCell.xib in Resources */,
 				47784F0F1CAE46720092AB69 /* Assets.xcassets in Resources */,
 				47784F0D1CAE46720092AB69 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82A6F671CB01C44004CBBB1 /* AlcoConfiguration.swift in Sources */,
+				E82A6F6D1CB0265B004CBBB1 /* GlassDataSource.swift in Sources */,
+				E82A6F711CB02899004CBBB1 /* AlcoholViewCell.swift in Sources */,
+				E82A6F621CB01AA7004CBBB1 /* Alcohol.swift in Sources */,
+				E82A6F6A1CB01FC6004CBBB1 /* Glass.swift in Sources */,
 				47784F0A1CAE46720092AB69 /* ViewController.swift in Sources */,
 				47784F081CAE46720092AB69 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +342,7 @@
 				47784F181CAE46720092AB69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
