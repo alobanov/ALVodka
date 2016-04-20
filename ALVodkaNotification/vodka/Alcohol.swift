@@ -16,15 +16,17 @@ public struct Alcohol {
     public var image: UIImage?
     public var duration: NSTimeInterval
     public var action: (() -> Void)?
+    public var to: UIViewController?
     
     public var destroyUid: String
     
-    public init(title: String, subtitle: String? = nil, image: UIImage? = nil, duration: NSTimeInterval = 2, action: (() -> Void)? = nil) {
+    public init(title: String, subtitle: String? = nil, image: UIImage? = nil, duration: NSTimeInterval = 2, action: (() -> Void)? = nil, to: UIViewController? = nil) {
         self.title = title
         self.subtitle = subtitle
         self.image = image
         self.duration = duration
         self.action = action
+        self.to = to
         destroyUid = String(format: "%f", NSDate().timeIntervalSince1970)
     }
 }

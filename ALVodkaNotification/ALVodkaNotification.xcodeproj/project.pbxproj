@@ -12,6 +12,7 @@
 		47784F0D1CAE46720092AB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47784F0B1CAE46720092AB69 /* Main.storyboard */; };
 		47784F0F1CAE46720092AB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47784F0E1CAE46720092AB69 /* Assets.xcassets */; };
 		47784F121CAE46720092AB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47784F101CAE46720092AB69 /* LaunchScreen.storyboard */; };
+		47A586731CC7BB6300F95E99 /* GlassQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A586721CC7BB6300F95E99 /* GlassQueue.swift */; };
 		E82A6F621CB01AA7004CBBB1 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */; };
 		E82A6F671CB01C44004CBBB1 /* AlcoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */; };
 		E82A6F6A1CB01FC6004CBBB1 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F691CB01FC6004CBBB1 /* Glass.swift */; };
@@ -28,6 +29,7 @@
 		47784F0E1CAE46720092AB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47784F111CAE46720092AB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47784F131CAE46720092AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A586721CC7BB6300F95E99 /* GlassQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassQueue.swift; sourceTree = "<group>"; };
 		E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
 		E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoConfiguration.swift; sourceTree = "<group>"; };
 		E82A6F691CB01FC6004CBBB1 /* Glass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = ALVodkaNotification;
 			sourceTree = "<group>";
 		};
+		47A586711CC7BB3600F95E99 /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				47A586721CC7BB6300F95E99 /* GlassQueue.swift */,
+			);
+			path = etc;
+			sourceTree = "<group>";
+		};
 		E82A6F601CB017AB004CBBB1 /* vodka */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		E82A6F681CB01FB6004CBBB1 /* Glass */ = {
 			isa = PBXGroup;
 			children = (
+				47A586711CC7BB3600F95E99 /* etc */,
 				E82A6F6B1CB0264D004CBBB1 /* dataSource */,
 				E82A6F691CB01FC6004CBBB1 /* Glass.swift */,
 			);
@@ -188,6 +199,7 @@
 			files = (
 				E82A6F671CB01C44004CBBB1 /* AlcoConfiguration.swift in Sources */,
 				E82A6F6D1CB0265B004CBBB1 /* GlassDataSource.swift in Sources */,
+				47A586731CC7BB6300F95E99 /* GlassQueue.swift in Sources */,
 				E82A6F711CB02899004CBBB1 /* AlcoholViewCell.swift in Sources */,
 				E82A6F621CB01AA7004CBBB1 /* Alcohol.swift in Sources */,
 				E82A6F6A1CB01FC6004CBBB1 /* Glass.swift in Sources */,
@@ -305,7 +317,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALVodkaNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alobanov.ALVodkaNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,7 +330,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ALVodkaNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alobanov.ALVodkaNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";

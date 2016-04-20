@@ -10,9 +10,9 @@ import UIKit
 
 let glass = Glass()
 
-public func Vodka(content: Alcohol, to: UIViewController, completion: (() -> ())? = {}) {
-    glass.pour(content, to: to, completion: completion)
-}
+//public func Vodka(content: Alcohol, to: UIViewController, completion: (() -> ())? = {}) {
+//    glass.pour(content, to: to, completion: completion)
+//}
 
 public class Glass: UIView {
     public private(set) lazy var backgroundView: UIView = {
@@ -47,6 +47,9 @@ public class Glass: UIView {
     public private(set) var displayTimer = NSTimer()
     public private(set) var shouldSilent = false
     public private(set) var completion: (() -> ())?
+    
+    private var queue = GlassQueue<Alcohol>()
+    private var controllerTo: UIViewController?
     
     // MARK: - Initializers
     
@@ -93,22 +96,33 @@ public class Glass: UIView {
     
     // MARK: - Configuration
     
-    public func pour(announcement: Alcohol, to: UIViewController, completion: (() -> ())?) {
+    public func pour(announcement: Alcohol, completion: (() -> ())?) {
+        queue.enqueue(announcement)
+        
+        if (queue.count == 1) {
+            self.checkNotify()
+        }
+    }
+    
+    public func checkNotify() {
+        guard let aloc = queue.peek() else {
+            return;
+        }
+        
         backgroundView.alpha = 1
         tableGlass.frame.size = CGSizeMake(1000, 1000)
-//        glassDataSource.items.insert(announcement, atIndex: 0)
-        glassDataSource.items.append(announcement)
+        glassDataSource.items.append(aloc)
         
         let indexPath = NSIndexPath(forRow: glassDataSource.items.count-1, inSection: 0)
         tableGlass.beginUpdates()
-        tableGlass.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
+        tableGlass.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
         tableGlass.endUpdates()
         
         shouldSilent = false
-        configureView(announcement)
-        shout(to: to)
+        configureView(aloc)
         
-        self.completion = completion
+        shout(to: aloc.to!)
+        self.completion = aloc.action
     }
     
     public func configureView(announcement: Alcohol) {
@@ -119,7 +133,12 @@ public class Glass: UIView {
     
     public func shout(to controller: UIViewController) {
         guard let controller = controller.navigationController else { fatalError("The controller must contain a navigation bar") }
-        controller.view.addSubview(self)
+        
+        if self.controllerTo == nil {
+            self.controllerTo = controller;
+            controller.view.addSubview(self)
+        }
+        
         setupFrames()
     }
     
@@ -148,7 +167,7 @@ public class Glass: UIView {
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
         glassDataSource.items.removeAtIndex(index)
         tableGlass.beginUpdates()
-        tableGlass.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
+        tableGlass.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
         tableGlass.endUpdates()
         
         NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: #selector(Glass.setupFrames), object: nil)
@@ -160,6 +179,9 @@ public class Glass: UIView {
     public func displayTimerDidFire(identifier: String) {
         shouldSilent = true
         silent(identifier)
+        
+        self.queue.dequeue()
+        self.performSelector(#selector(Glass.checkNotify), withObject: nil, afterDelay: 0.5)
     }
     
     // MARK: - Handling screen orientation

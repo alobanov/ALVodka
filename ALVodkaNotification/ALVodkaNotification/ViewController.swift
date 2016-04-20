@@ -41,8 +41,33 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showNotify(sender: AnyObject) {
-        let announcement = Alcohol(title: "Бэтмен. Возвращение Темного Рыцаря", subtitle: "In Swift, the == operator is equivalent to Objective C's isEqual: method.", image: UIImage(named: "avatar"), duration: 3)
-        Vodka(announcement, to: self)
+        let announcement = Alcohol(title: self.randomStringWithLength(self.rand(14)),
+                                   subtitle: self.randomStringWithLength(self.rand(500)),
+                                   image: UIImage(named: "avatar"),
+                                   duration: 3,
+                                   to: self)
+        
+        glass.pour(announcement) { 
+            print("completed")
+        }
+    }
+    
+    func rand(i: UInt32)-> Int {
+        return Int(arc4random_uniform(i) + 1)
+    }
+    
+    func randomStringWithLength (len : Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let randomString : NSMutableString = NSMutableString(capacity: len)
+        
+        for _ in 0..<len {
+            let length = UInt32 (letters.length)
+            let rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+        }
+        
+        return randomString as String
     }
 }
 
