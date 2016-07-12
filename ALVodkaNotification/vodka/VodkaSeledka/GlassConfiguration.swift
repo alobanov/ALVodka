@@ -19,16 +19,19 @@ protocol Configurable {
     var dimsBackground: Bool { get }
     var userInterationEnabled: Bool { get }
     var position: Position { get }
+    var queueEnabled: Bool { get }
 }
 
 struct NotificationConf: Configurable {
     var dimsBackground: Bool = false
     var userInterationEnabled: Bool = true
     var position = Position.Top
+    var queueEnabled = false
 }
 
 struct AlertConf: Configurable {
     var dimsBackground: Bool = true
     var userInterationEnabled: Bool = false
     var position = Position.Center
+    var queueEnabled = true
 }

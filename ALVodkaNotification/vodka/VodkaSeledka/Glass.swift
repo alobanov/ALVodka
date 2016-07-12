@@ -61,6 +61,7 @@ class Glass: UIView {
     
     internal func pour(content: BaseHudView, inView: UIView) {
         // setup new content
+        
         queue.enqueue(content)
         if (queue.count == 1) {
             self.checkNextRecipe()
@@ -68,6 +69,14 @@ class Glass: UIView {
         
         if (self.superview == nil) {
             inView.addSubview(self)
+        }
+        
+        if (queue.count > 1) {
+            if !content.configuration.queueEnabled {
+                if self.content != nil {
+                    self.hide()
+                }
+            }
         }
     }
     
