@@ -17,9 +17,9 @@ let glass = Glass()
 public class Glass: UIView {
     public private(set) lazy var backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.clearColor()//Recipe.Colors.background
+        view.backgroundColor = UIColor.clearColor()//  Recipe.Colors.background
         view.clipsToBounds = false
-        view.alpha = 0
+        view.alpha = 1
         
         return view
     }()
@@ -115,7 +115,7 @@ public class Glass: UIView {
         
         let indexPath = NSIndexPath(forRow: glassDataSource.items.count-1, inSection: 0)
         tableGlass.beginUpdates()
-        tableGlass.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
+        tableGlass.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         tableGlass.endUpdates()
         
         shouldSilent = false
@@ -167,7 +167,7 @@ public class Glass: UIView {
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
         glassDataSource.items.removeAtIndex(index)
         tableGlass.beginUpdates()
-        tableGlass.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
+        tableGlass.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         tableGlass.endUpdates()
         
         NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: #selector(Glass.setupFrames), object: nil)

@@ -41,15 +41,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showNotify(sender: AnyObject) {
-        let announcement = Alcohol(title: self.randomStringWithLength(self.rand(14)),
-                                   subtitle: self.randomStringWithLength(self.rand(500)),
-                                   image: UIImage(named: "avatar"),
-                                   duration: 3,
-                                   to: self)
         
-        glass.pour(announcement) { 
-            print("completed")
-        }
+        Bottle.pour(.LabeledSuccess(title: "Test", subtitle: "Testovich"), inController: self)
+        
+//        let announcement = Alcohol(title: self.randomStringWithLength(self.rand(14)),
+//                                   subtitle: self.randomStringWithLength(self.rand(500)),
+//                                   image: UIImage(named: "avatar"),
+//                                   duration: 3,
+//                                   to: self)
+//        
+//        glass.pour(announcement) { 
+//            print("completed")
+//        }
     }
     
     func rand(i: UInt32)-> Int {
