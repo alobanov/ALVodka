@@ -9,9 +9,9 @@
 import UIKit
 
 public class AlertHudView: BaseHudView {
-    @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descrLabel: UILabel!
+    @IBOutlet weak var bubleView: UIView!
     
     func updateTitle(title: String) {
         self.titleLabel.text = title
@@ -23,23 +23,24 @@ public class AlertHudView: BaseHudView {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        
-        iconView.image = Vodka.imageOfCanvas1
+        self.layoutIfNeeded()
     }
     
-    class func alertSuccess() -> AlertHudView {
-        let v = AlertHudView.instance(AlertHudView.self)
-        v.updateTitle("")
-        v.updateDescription("")
-        
-        return v
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPath = UIBezierPath.init(rect: self.bounds)
+        self.layer.masksToBounds = false;
+        self.layer.shadowColor = UIColor.blackColor().CGColor;
+        self.layer.shadowOffset = CGSizeMake(0, 1.1);
+        self.layer.shadowOpacity = 0.3;
+        self.layer.shadowPath = shadowPath.CGPath;
     }
     
-    class func alertSuccess(title: String, descr: String) -> AlertHudView {
-        let v = AlertHudView.instance(AlertHudView.self)
-        v.updateTitle(title)
-        v.updateDescription(descr)
-        
-        return v
+    @IBAction func tapOnAlert(sender: AnyObject) {
+        print("Hellow tap")
+        if let b = self.manualCloseEventBlock {
+            b()
+        }
     }
+
 }

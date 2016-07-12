@@ -9,26 +9,11 @@
 import Foundation
 
 protocol ViewConfigurable {
-    var config: Themeble {get set}
     var constraintH: (String, UInt) { get }
     var constraintV: (String, UInt) { get }
-}
-
-enum Position: Int {
-    case Center = 0, CenterRright, CenterLeft, CenterWithScreenWidth,
-    Top, TopRight, TopLeft, TopWithScreenWidth,
-    Bottom, BottomRight, BottomLeft, BottomWithScreenWidth
-}
-
-protocol Themeble {
-    //Alerts
-    var position: Position { get }
-}
-
-struct BaseConfiguration: Themeble {
-    var position = Position.Top
-}
-
-struct TopConfiguration: Themeble {
-    var position = Position.Center
+    
+    var manualCloseEventBlock: (() -> Void)? {set get}
+    
+    func show(block: (Bool)->())
+    func hide(block: (Bool)->())
 }

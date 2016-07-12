@@ -10,49 +10,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let glass = Glass()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-//        let container = UIView()
-//        container.backgroundColor = UIColor.blueColor()
-//        container.frame = CGRectMake(0.0, 90.0, 400.0, 100.0)
-//        
-//        let fView = UIView()
-//        fView.translatesAutoresizingMaskIntoConstraints = false
-//        self.view.addSubview(container)
-//        container.addSubview(fView)
-//        fView.backgroundColor = UIColor.redColor()
-//        
-//        let variableBindings = ["headerView":fView]
-//        
-//        let cn1 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[headerView(>=300)]-20-|", options:.AlignAllBaseline, metrics: nil, views: variableBindings)
-//        
-//        let cn2 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-20-[headerView(>=50)]-20-|", options:.AlignAllBaseline, metrics: nil, views: variableBindings)
-//        
-//        container.addConstraints(cn1)
-//        container.addConstraints(cn2)
     }
 
+    deinit {
+        print("Destroy: \(#file.componentsSeparatedByString("/").last!) : \(#function)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func showNotify(sender: AnyObject) {
-        
-        Bottle.pour(.LabeledSuccess(title: "Test", subtitle: "Testovich"), inController: self)
-        
-//        let announcement = Alcohol(title: self.randomStringWithLength(self.rand(14)),
-//                                   subtitle: self.randomStringWithLength(self.rand(500)),
-//                                   image: UIImage(named: "avatar"),
-//                                   duration: 3,
-//                                   to: self)
-//        
-//        glass.pour(announcement) { 
-//            print("completed")
-//        }
+        if let view = self.navigationController?.view {
+            let reciept = NotifyCocktail.makeAlcohol(.Success(title: randomStringWithLength(rand(14)),
+                subtitle:randomStringWithLength(rand(200))))
+            
+            reciept.configuration = NotificationConf()
+            glass.pour(reciept, inView: view)
+        }
+    }
+    
+    @IBAction func showAlert(sender: AnyObject) {
+        if let view = self.navigationController?.view {
+            let reciept = NotifyCocktail.makeAlcohol(.Error(title: randomStringWithLength(rand(14)),
+                subtitle:randomStringWithLength(rand(200))))
+            
+            reciept.configuration = AlertConf()
+            glass.pour(reciept, inView: view)
+        }
+    }
+    
+    @IBAction func closeSelf(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func rand(i: UInt32)-> Int {

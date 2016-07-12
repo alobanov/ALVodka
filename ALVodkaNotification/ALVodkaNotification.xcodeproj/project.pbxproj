@@ -12,21 +12,17 @@
 		47784F0D1CAE46720092AB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47784F0B1CAE46720092AB69 /* Main.storyboard */; };
 		47784F0F1CAE46720092AB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47784F0E1CAE46720092AB69 /* Assets.xcassets */; };
 		47784F121CAE46720092AB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47784F101CAE46720092AB69 /* LaunchScreen.storyboard */; };
-		47A586731CC7BB6300F95E99 /* GlassQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A586721CC7BB6300F95E99 /* GlassQueue.swift */; };
-		E8262D9A1D327CE200ECCD07 /* VodkaWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8262D991D327CE200ECCD07 /* VodkaWindow.swift */; };
-		E8262D9D1D32807F00ECCD07 /* VodkaSeledka.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8262D9C1D32807F00ECCD07 /* VodkaSeledka.swift */; };
+		E8262D9D1D32807F00ECCD07 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8262D9C1D32807F00ECCD07 /* Glass.swift */; };
 		E82A6F621CB01AA7004CBBB1 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */; };
 		E82A6F671CB01C44004CBBB1 /* AlcoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */; };
-		E82A6F6A1CB01FC6004CBBB1 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F691CB01FC6004CBBB1 /* Glass.swift */; };
-		E82A6F6D1CB0265B004CBBB1 /* GlassDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F6C1CB0265B004CBBB1 /* GlassDataSource.swift */; };
-		E82A6F711CB02899004CBBB1 /* AlcoholViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A6F701CB02899004CBBB1 /* AlcoholViewCell.swift */; };
-		E82A6F731CB028EF004CBBB1 /* AlcoholViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82A6F721CB028EF004CBBB1 /* AlcoholViewCell.xib */; };
+		E88E4E741D34E891006D2460 /* NotifyCocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E4E731D34E891006D2460 /* NotifyCocktail.swift */; };
+		E88E4E761D3505E0006D2460 /* GlassQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E4E751D3505E0006D2460 /* GlassQueue.swift */; };
+		E88E4E781D3507EF006D2460 /* GlassConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E4E771D3507EF006D2460 /* GlassConfiguration.swift */; };
+		E88E4E7B1D354945006D2460 /* AlertHudView+Fabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E4E7A1D354945006D2460 /* AlertHudView+Fabric.swift */; };
 		E8D189481D3380830026868E /* AlertHudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D189471D3380830026868E /* AlertHudView.swift */; };
 		E8D1894A1D3380950026868E /* AlertHudView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D189491D3380950026868E /* AlertHudView.xib */; };
 		E8D1894D1D33BE530026868E /* AlcoRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1894C1D33BE530026868E /* AlcoRecipe.swift */; };
-		E8D189551D33C8D10026868E /* Vodka.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D189541D33C8D10026868E /* Vodka.swift */; };
 		E8D189571D33D74F0026868E /* BaseHudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D189561D33D74F0026868E /* BaseHudView.swift */; };
-		E8D189591D33DF7B0026868E /* Bottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D189581D33DF7B0026868E /* Bottle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,21 +33,17 @@
 		47784F0E1CAE46720092AB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47784F111CAE46720092AB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47784F131CAE46720092AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47A586721CC7BB6300F95E99 /* GlassQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassQueue.swift; sourceTree = "<group>"; };
-		E8262D991D327CE200ECCD07 /* VodkaWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VodkaWindow.swift; sourceTree = "<group>"; };
-		E8262D9C1D32807F00ECCD07 /* VodkaSeledka.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VodkaSeledka.swift; sourceTree = "<group>"; };
+		E8262D9C1D32807F00ECCD07 /* Glass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
 		E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
 		E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoConfiguration.swift; sourceTree = "<group>"; };
-		E82A6F691CB01FC6004CBBB1 /* Glass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
-		E82A6F6C1CB0265B004CBBB1 /* GlassDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassDataSource.swift; sourceTree = "<group>"; };
-		E82A6F701CB02899004CBBB1 /* AlcoholViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoholViewCell.swift; sourceTree = "<group>"; };
-		E82A6F721CB028EF004CBBB1 /* AlcoholViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlcoholViewCell.xib; sourceTree = "<group>"; };
+		E88E4E731D34E891006D2460 /* NotifyCocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyCocktail.swift; sourceTree = "<group>"; };
+		E88E4E751D3505E0006D2460 /* GlassQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassQueue.swift; sourceTree = "<group>"; };
+		E88E4E771D3507EF006D2460 /* GlassConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassConfiguration.swift; sourceTree = "<group>"; };
+		E88E4E7A1D354945006D2460 /* AlertHudView+Fabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertHudView+Fabric.swift"; sourceTree = "<group>"; };
 		E8D189471D3380830026868E /* AlertHudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHudView.swift; sourceTree = "<group>"; };
 		E8D189491D3380950026868E /* AlertHudView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertHudView.xib; sourceTree = "<group>"; };
 		E8D1894C1D33BE530026868E /* AlcoRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoRecipe.swift; sourceTree = "<group>"; };
-		E8D189541D33C8D10026868E /* Vodka.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vodka.swift; sourceTree = "<group>"; };
 		E8D189561D33D74F0026868E /* BaseHudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHudView.swift; sourceTree = "<group>"; };
-		E8D189581D33DF7B0026868E /* Bottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bottle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,22 +87,15 @@
 			path = ALVodkaNotification;
 			sourceTree = "<group>";
 		};
-		47A586711CC7BB3600F95E99 /* etc */ = {
-			isa = PBXGroup;
-			children = (
-				47A586721CC7BB6300F95E99 /* GlassQueue.swift */,
-			);
-			path = etc;
-			sourceTree = "<group>";
-		};
 		E8262D9B1D32806000ECCD07 /* VodkaSeledka */ = {
 			isa = PBXGroup;
 			children = (
-				E8D1894E1D33C83A0026868E /* resources */,
+				E88E4E751D3505E0006D2460 /* GlassQueue.swift */,
+				E88E4E701D34E778006D2460 /* Cocktail */,
 				E8D189461D33804A0026868E /* views */,
-				E8262D9C1D32807F00ECCD07 /* VodkaSeledka.swift */,
+				E8262D9C1D32807F00ECCD07 /* Glass.swift */,
 				E8D1894C1D33BE530026868E /* AlcoRecipe.swift */,
-				E8D189581D33DF7B0026868E /* Bottle.swift */,
+				E88E4E771D3507EF006D2460 /* GlassConfiguration.swift */,
 			);
 			path = VodkaSeledka;
 			sourceTree = "<group>";
@@ -119,40 +104,18 @@
 			isa = PBXGroup;
 			children = (
 				E8262D9B1D32806000ECCD07 /* VodkaSeledka */,
-				E82A6F681CB01FB6004CBBB1 /* Glass */,
 				E82A6F611CB01AA7004CBBB1 /* Alcohol.swift */,
 				E82A6F661CB01C44004CBBB1 /* AlcoConfiguration.swift */,
 			);
 			path = vodka;
 			sourceTree = "<group>";
 		};
-		E82A6F681CB01FB6004CBBB1 /* Glass */ = {
+		E88E4E701D34E778006D2460 /* Cocktail */ = {
 			isa = PBXGroup;
 			children = (
-				47A586711CC7BB3600F95E99 /* etc */,
-				E82A6F6B1CB0264D004CBBB1 /* dataSource */,
-				E82A6F691CB01FC6004CBBB1 /* Glass.swift */,
-				E8262D991D327CE200ECCD07 /* VodkaWindow.swift */,
+				E88E4E731D34E891006D2460 /* NotifyCocktail.swift */,
 			);
-			path = Glass;
-			sourceTree = "<group>";
-		};
-		E82A6F6B1CB0264D004CBBB1 /* dataSource */ = {
-			isa = PBXGroup;
-			children = (
-				E82A6F6F1CB02860004CBBB1 /* AlcoholCell */,
-				E82A6F6C1CB0265B004CBBB1 /* GlassDataSource.swift */,
-			);
-			path = dataSource;
-			sourceTree = "<group>";
-		};
-		E82A6F6F1CB02860004CBBB1 /* AlcoholCell */ = {
-			isa = PBXGroup;
-			children = (
-				E82A6F701CB02899004CBBB1 /* AlcoholViewCell.swift */,
-				E82A6F721CB028EF004CBBB1 /* AlcoholViewCell.xib */,
-			);
-			path = AlcoholCell;
+			path = Cocktail;
 			sourceTree = "<group>";
 		};
 		E8D189461D33804A0026868E /* views */ = {
@@ -161,16 +124,9 @@
 				E8D189561D33D74F0026868E /* BaseHudView.swift */,
 				E8D189471D3380830026868E /* AlertHudView.swift */,
 				E8D189491D3380950026868E /* AlertHudView.xib */,
+				E88E4E7A1D354945006D2460 /* AlertHudView+Fabric.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		E8D1894E1D33C83A0026868E /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				E8D189541D33C8D10026868E /* Vodka.swift */,
-			);
-			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +189,6 @@
 			files = (
 				E8D1894A1D3380950026868E /* AlertHudView.xib in Resources */,
 				47784F121CAE46720092AB69 /* LaunchScreen.storyboard in Resources */,
-				E82A6F731CB028EF004CBBB1 /* AlcoholViewCell.xib in Resources */,
 				47784F0F1CAE46720092AB69 /* Assets.xcassets in Resources */,
 				47784F0D1CAE46720092AB69 /* Main.storyboard in Resources */,
 			);
@@ -246,18 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88E4E741D34E891006D2460 /* NotifyCocktail.swift in Sources */,
 				E82A6F671CB01C44004CBBB1 /* AlcoConfiguration.swift in Sources */,
+				E88E4E7B1D354945006D2460 /* AlertHudView+Fabric.swift in Sources */,
 				E8D189481D3380830026868E /* AlertHudView.swift in Sources */,
-				E82A6F6D1CB0265B004CBBB1 /* GlassDataSource.swift in Sources */,
-				E8D189591D33DF7B0026868E /* Bottle.swift in Sources */,
-				E8D189551D33C8D10026868E /* Vodka.swift in Sources */,
-				47A586731CC7BB6300F95E99 /* GlassQueue.swift in Sources */,
+				E88E4E761D3505E0006D2460 /* GlassQueue.swift in Sources */,
+				E88E4E781D3507EF006D2460 /* GlassConfiguration.swift in Sources */,
 				E8D189571D33D74F0026868E /* BaseHudView.swift in Sources */,
-				E82A6F711CB02899004CBBB1 /* AlcoholViewCell.swift in Sources */,
 				E82A6F621CB01AA7004CBBB1 /* Alcohol.swift in Sources */,
-				E8262D9D1D32807F00ECCD07 /* VodkaSeledka.swift in Sources */,
-				E8262D9A1D327CE200ECCD07 /* VodkaWindow.swift in Sources */,
-				E82A6F6A1CB01FC6004CBBB1 /* Glass.swift in Sources */,
+				E8262D9D1D32807F00ECCD07 /* Glass.swift in Sources */,
 				47784F0A1CAE46720092AB69 /* ViewController.swift in Sources */,
 				E8D1894D1D33BE530026868E /* AlcoRecipe.swift in Sources */,
 				47784F081CAE46720092AB69 /* AppDelegate.swift in Sources */,
