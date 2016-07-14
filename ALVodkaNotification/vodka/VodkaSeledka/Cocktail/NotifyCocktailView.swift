@@ -8,7 +8,27 @@
 
 import UIKit
 
-public class AlertHudView: BaseHudView {
+struct NotificationConf: Configurable {
+    var dimsBackground: Bool = false
+    var style: VodkaStyle = VodkaStyle.Notification
+    var position = VodkaPosition.Top
+    var queueEnabled = false
+    var autoHide: Bool = true
+    var delay: NSTimeInterval = 5
+    
+}
+
+struct AlertConf: Configurable {
+    var dimsBackground: Bool = true
+    var style: VodkaStyle = VodkaStyle.FullScreen
+    var position = VodkaPosition.Center
+    var queueEnabled = true
+    var autoHide: Bool = false
+    var delay: NSTimeInterval = 0
+    
+}
+
+public class NotifyCocktailView: Alcohol {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descrLabel: UILabel!
     @IBOutlet weak var bubleView: UIView!
@@ -23,7 +43,6 @@ public class AlertHudView: BaseHudView {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        self.layoutIfNeeded()
     }
     
     override public func layoutSubviews() {
