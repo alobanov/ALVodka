@@ -8,12 +8,11 @@
 
 import UIKit
 
-public class BaseHudView: UIView, ViewConfigurable {
-    
-    var configuration: Configurable!
+public class Alcohol: UIView, AlcoholConfigurable {
+    var configuration: Configurable = VodkaConf()
     var manualCloseEventBlock: (() -> Void)?
     
-    var constraintH: (String, UInt) {
+    internal var constraintH: (String, UInt) {
         switch configuration.position {
         case .Bottom, .Top:
             return ("H:|-10-[content]-10-|", 0)
@@ -22,7 +21,7 @@ public class BaseHudView: UIView, ViewConfigurable {
         }
     }
     
-    var constraintV: (String, UInt) {
+    internal var constraintV: (String, UInt) {
         switch configuration.position {
         case .Top:
             return ("V:|-24-[content(>=10)]", 0)
@@ -31,12 +30,14 @@ public class BaseHudView: UIView, ViewConfigurable {
         default:
             return ("V:[container]-(<=0)-[content(>=30)]", NSLayoutFormatOptions.AlignAllCenterX.rawValue)
         }
-        
     }
     
-    public override init(frame: CGRect) {
+    convenience init() {
+        self.init(frame: CGRectZero)
+    }
+    
+    internal override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.redColor()
     }
     
     public required init?(coder aDecoder: NSCoder) {
