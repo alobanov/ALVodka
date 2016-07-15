@@ -18,20 +18,14 @@ struct NotificationConf: Configurable {
     
 }
 
-struct AlertConf: Configurable {
-    var dimsBackground: Bool = true
-    var style: VodkaStyle = VodkaStyle.FullScreen
-    var position = VodkaPosition.Center
-    var queueEnabled = true
-    var autoHide: Bool = false
-    var delay: NSTimeInterval = 0
-    
-}
-
 public class NotifyCocktailView: Alcohol {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descrLabel: UILabel!
     @IBOutlet weak var bubleView: UIView!
+    
+    override func configuration() -> Configurable {
+        return NotificationConf()
+    }
     
     func updateTitle(title: String) {
         self.titleLabel.text = title

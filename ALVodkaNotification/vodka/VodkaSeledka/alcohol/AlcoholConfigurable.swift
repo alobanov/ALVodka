@@ -9,8 +9,6 @@
 import Foundation
 
 protocol AlcoholConfigurable {
-    // configuration
-    var configuration: Configurable { set get }
     
     // Constraint setting use text format
     var constraintH: (String, UInt) { get }
@@ -19,9 +17,11 @@ protocol AlcoholConfigurable {
     // Common close block
     var manualCloseEventBlock: (() -> Void)? {set get}
     
-    // anumation in this methods
+    // animation in this methods
     func show(block: (Bool)->())
     func hide(block: (Bool)->())
+    
+    func configuration() -> Configurable
 }
 
 enum VodkaPosition: Int {
@@ -33,7 +33,6 @@ enum VodkaStyle: Int {
 }
 
 protocol Configurable {
-    //Alerts
     var dimsBackground: Bool { get }
     var style: VodkaStyle { get }
     var position: VodkaPosition { get }

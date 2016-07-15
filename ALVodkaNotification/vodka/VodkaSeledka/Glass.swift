@@ -48,7 +48,7 @@ public class Glass: UIView {
     private func updateConten(content: Alcohol) {
         self.content = content
         
-        if (content.configuration.dimsBackground) {
+        if (content.configuration().dimsBackground) {
             addSubview(backgroundView)
         }
         addSubview(content)
@@ -73,7 +73,7 @@ public class Glass: UIView {
         }
         
         if queue.count > 1 {
-            if !content.configuration.queueEnabled {
+            if !content.configuration().queueEnabled {
                 if self.content != nil {
                     self.breatheOut()
                 }
@@ -97,7 +97,7 @@ public class Glass: UIView {
     private func drink() {
         self.hidden = false
         
-        if content.configuration.dimsBackground {
+        if content.configuration().dimsBackground {
             UIView.animateWithDuration(0.5) {
                 self.backgroundView.alpha = 1
             }
@@ -108,9 +108,9 @@ public class Glass: UIView {
             self?.breatheOut()
         })
         
-        if self.content.configuration.autoHide {
+        if self.content.configuration().autoHide {
             displayTimer.invalidate()
-            displayTimer = NSTimer.scheduledTimerWithTimeInterval(self.content.configuration.delay,
+            displayTimer = NSTimer.scheduledTimerWithTimeInterval(self.content.configuration().delay,
                                                                   target: self,
                                                                   selector: #selector(Glass.breatheOut),
                                                                   userInfo: nil,
@@ -123,7 +123,7 @@ public class Glass: UIView {
         queue.dequeue()
         displayTimer.invalidate()
         
-        if (content.configuration.dimsBackground) {
+        if (content.configuration().dimsBackground) {
             UIView.animateWithDuration(0.3, animations: { 
                 self.backgroundView.alpha = 0;
             })
@@ -148,7 +148,7 @@ public class Glass: UIView {
         backgroundView.frame = UIScreen.mainScreen().bounds
         self.backgroundView.frame.size = self.frame.size
         
-        switch content.configuration.style {
+        switch content.configuration().style {
         case .FullScreen:
             break
         case .Notification:

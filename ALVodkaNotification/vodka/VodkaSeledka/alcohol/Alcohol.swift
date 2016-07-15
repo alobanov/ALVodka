@@ -9,11 +9,11 @@
 import UIKit
 
 public class Alcohol: UIView, AlcoholConfigurable {
-    var configuration: Configurable = VodkaConf()
+    
     var manualCloseEventBlock: (() -> Void)?
     
     internal var constraintH: (String, UInt) {
-        switch configuration.position {
+        switch configuration().position {
         case .Bottom, .Top:
             return ("H:|-10-[content]-10-|", 0)
         default:
@@ -22,7 +22,7 @@ public class Alcohol: UIView, AlcoholConfigurable {
     }
     
     internal var constraintV: (String, UInt) {
-        switch configuration.position {
+        switch configuration().position {
         case .Top:
             return ("V:|-24-[content(>=10)]", 0)
         case .Bottom:
@@ -30,6 +30,10 @@ public class Alcohol: UIView, AlcoholConfigurable {
         default:
             return ("V:[container]-(<=0)-[content(>=30)]", NSLayoutFormatOptions.AlignAllCenterX.rawValue)
         }
+    }
+    
+    func configuration() -> Configurable {
+        return VodkaConf()
     }
     
     convenience init() {
