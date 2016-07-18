@@ -1,17 +1,22 @@
 Pod::Spec.new do |s|
+    s.name             = 'Nuke'
+    s.version          = '3.1.3'
+    s.summary          = 'Advanced Swift framework for showing alerts and notifications'
+    s.description  = <<-EOS
+    Advanced Swift framework for showing alerts and notifications [more](https://github.com/alobanov/ALVodka).
+    EOS
 
-  s.name         = "ALVodka"
-  s.version      = "0.1"
-  s.summary      = "Alert & notification view"
-  s.homepage     = "https://github.com/alobanov/ALVodka"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "Alexey Lobanov" => "lobanov.aw@gmail.com" }
-  s.platform     = :ios, "8.0"
+    s.homepage         = 'https://github.com/alobanov/ALVodka'
+    s.license          = 'MIT'
+    s.author           = 'Aleksey Lobanov'
+    s.social_media_url = 'https://twitter.com/alobanov'
+    s.source           = { :git => 'https://github.com/alobanov/ALVodka.git', :tag => s.version.to_s }
 
-  s.source       = { :git => "https://github.com/alobanov/ALVodka.git" }
-  s.source_files = "ALVodka/*.{h,m}"
-  s.public_header_files = "ALVodka/*.{h}"
-  s.framework    = "UIKit"
-  s.requires_arc = true
+    s.ios.deployment_target = '8.0'
+    s.watchos.deployment_target = '2.0'
+    s.osx.deployment_target = '10.9'
+    s.tvos.deployment_target = '9.0'
 
+    s.source_files  = 'Sources/**/*'
+    # s.watchos.exclude_files = 'Sources/ImageLoadingView.swift'
 end
