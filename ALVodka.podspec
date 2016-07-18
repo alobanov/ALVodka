@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.license          = 'MIT'
     s.author           = 'Aleksey Lobanov'
     s.social_media_url = 'https://twitter.com/alobanov'
-    s.source           = { :git => 'https://github.com/alobanov/ALVodka.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/alobanov/ALVodka.git', :branch => "master" }
 
     s.ios.deployment_target = '8.0'
     s.watchos.deployment_target = '2.0'
