@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'ALVodka'
-    s.version          = '0.1'
+    s.version          = '0.2'
     s.summary          = 'Advanced Swift framework for showing alerts and notifications'
     s.description  = <<-EOS
     Advanced Swift framework for showing alerts and notifications [more](https://github.com/alobanov/ALVodka).
